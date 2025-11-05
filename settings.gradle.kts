@@ -1,7 +1,3 @@
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
-rootProject.name = "CrossplatForms"
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -12,6 +8,14 @@ pluginManagement {
         id("io.github.goooler.shadow") version "8.1.7"// shadowing dependencies
     }
 }
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "CrossplatForms"
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -69,3 +73,6 @@ findProject(":spigot-common:v1_21_R4")?.name = "v1_21_R4"
 
 include("spigot-common:v1_21_R5")
 findProject(":spigot-common:v1_21_R5")?.name = "v1_21_R5"
+
+include("spigot-common:v1_21_R6")
+findProject(":spigot-common:v1_21_R6")?.name = "v1_21_R6"
